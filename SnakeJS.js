@@ -1222,7 +1222,7 @@ function SnakeJS() {
             let token = generateToken();
             setCookie("token", token);
 
-            let score = parseInt(init.game.score);
+            let score = parseInt(init.game.score) * 100;
             let player = document.getElementById("player_name").value;
 
             $.post("online.php", {score: score, token: token, player: player})
